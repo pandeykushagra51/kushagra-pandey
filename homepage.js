@@ -13,6 +13,10 @@ app.use('/products',productRoute)
 app.use('/query',queryRoute)
 
 app.use((req,res)=>{
+    let cnt=0;
+    for(let i=0;i<10;i++)
+    cnt+=i;
+    console.log(cnt)
     res.sendFile('./Error/404.html',{root:__dirname})
 })
 
